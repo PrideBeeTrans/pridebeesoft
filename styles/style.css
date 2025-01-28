@@ -4,6 +4,7 @@
     --rosa-trans: #ffb3c6;
     --branco: #ffffff;
     --cinza: #4b5563;
+    --cinza-claro: #dbdada;
     --sombra: rgba(0, 0, 0, 0.1);
 }
 
@@ -15,23 +16,25 @@ body {
     background-color: var(--azul-trans);
     color: var(--cinza);
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 /* Cabeçalho e Menu */
+header {
+    color: var(--branco);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--sombra);
+    border-bottom: 4px solid var(--azul-trans);
+}
+
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    background: var(--rosa-trans);
     display: flex;
-    justify-content: center;
-    box-shadow: 0 4px 8px var(--sombra);
-    border-bottom: 4px solid var(--azul-trans);
-    border-radius: 0 0 15px 15px;
+    justify-content: space-around;
+    background: var(--rosa-trans);
+    width: 100%;
 }
 
 li {
@@ -42,32 +45,47 @@ li a {
     display: inline-block;
     color: var(--branco);
     text-align: center;
-    padding: 18px 22px;
+    padding: 10px 22px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 li a:hover {
     background: var(--branco);
     color: var(--rosa-trans);
-    transform: scale(1.1);
-    box-shadow: 0 4px 6px var(--sombra);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Página ativa */
+li a.active {
+    background: var(--branco);
+    color: var(--rosa-trans);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.05rem;
 }
 
 /* Seções */
 section {
     background: var(--branco);
-    width: 80%;
-    max-width: 900px;
+    max-width: 1500px;
     margin: 20px auto;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px var(--sombra);
-    text-align: center;
+    text-align: left;
+}
+
+/* Bloco de Destaque para o Blog */
+blockquote {
+    font-style: italic;
+    color: var(--cinza);
+    background-color: var(--cinza-claro);
+    padding: 10px 20px;
+    border-left: 4px solid var(--rosa-trans);
+    margin: 20px 0;
+    border-radius: 10px;
 }
 
 /* Footer */
@@ -76,9 +94,6 @@ footer {
     color: var(--branco);
     text-align: center;
     padding: 12px;
-    border-radius: 10px;
     margin-top: 20px;
     width: 100%;
-    box-shadow: 0 -4px 6px var(--sombra);
-    font-size: 0.9rem;
 }
