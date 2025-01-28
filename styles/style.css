@@ -1,46 +1,84 @@
-body{
-    background-color:thistle;
-    margin: 0 auto;
-    padding: 20px;
+/* Cores principais */
+:root {
+    --azul-trans: #a1d8ff;
+    --rosa-trans: #ffb3c6;
+    --branco: #ffffff;
+    --cinza: #4b5563;
+    --sombra: rgba(0, 0, 0, 0.1);
 }
 
-ul{
-    list-style-type: none;
+/* Reset */
+body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #ff70bf;
-    font-weight: bold;
-    font-style: "Arial";
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--azul-trans);
+    color: var(--cinza);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-li{
-    float: left;
+/* Cabeçalho e Menu */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: var(--rosa-trans);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px var(--sombra);
+    border-bottom: 4px solid var(--azul-trans);
+    border-radius: 0 0 15px 15px;
 }
 
-li a{
+li {
+    margin: 0;
+}
+
+li a {
     display: inline-block;
-    color: #fff;
+    color: var(--branco);
     text-align: center;
     padding: 18px 22px;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-radius: 12px;
 }
 
-li a:hover{
-    background-color: #f5f5f5;
-    color: #ff70bf;
+li a:hover {
+    background: var(--branco);
+    color: var(--rosa-trans);
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px var(--sombra);
 }
 
-section{
-    background-color: white;
-    padding: 10px;
-}
-
-
-footer{
-    background-color: #ff70bf;
+/* Seções */
+section {
+    background: var(--branco);
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--sombra);
     text-align: center;
-    padding: 8px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: var(--rosa-trans);
+    color: var(--branco);
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 -4px 6px var(--sombra);
+    font-size: 0.9rem;
 }
